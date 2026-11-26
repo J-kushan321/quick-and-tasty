@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hummus & Veggie Sticks — Quick &amp; Tasty</title>
+<meta name="description" content="Creamy homemade hummus with a swirl of olive oil, served with crunchy carrot, cucumber and pepper sticks — a fresh, healthy snack in 15 minutes." />
+<meta name="p:domain_verify" content="9f3fcfaa1757df996eee567480ca74e5" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<style>
+:root{--bg:#FFF8E7;--ink:#111111;--accent:#2FA84F;--green:#2FA84F;--gold:#E8A100;--line:#EDEDE6;--soft:#E6F4EA}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.6}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background-image:url("images/full-bg.webp");background-size:cover;background-position:center;background-attachment:fixed;filter:blur(3px);-webkit-filter:blur(3px);transform:scale(1.02)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;background:rgba(255,248,231,.70)}
+a{color:var(--accent)}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px 60px}
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar-in{display:flex;align-items:center;gap:18px;padding:12px 0}
+.brand{font-family:"DM Serif Display",serif;font-size:1.3rem;color:var(--ink);text-decoration:none;white-space:nowrap}.brand{display:inline-flex;align-items:center;gap:9px}.brand-logo{width:34px;height:34px;border-radius:9px;flex:none}
+.brand span{color:var(--accent)}
+.nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+.nav a{color:var(--ink);text-decoration:none;font-weight:700;font-size:.95rem;padding:9px 12px;border-radius:999px}
+.nav a:hover{background:var(--soft)}
+.saved-pill{background:var(--pink-soft);color:var(--pink);border-radius:999px;padding:9px 16px;font-weight:800;font-size:.92rem;text-decoration:none;white-space:nowrap}
+@media(max-width:640px){.nav a{padding:9px 8px;font-size:.88rem}
+.menu-btn{display:none}
+@media (max-width:700px){
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;flex:none;margin-left:auto;border:1px solid var(--line);background:#fff;border-radius:12px;font-size:1.25rem;line-height:1;cursor:pointer;color:var(--ink)}
+  .topbar-in{gap:10px;flex-wrap:nowrap}
+  .brand{font-size:1.15rem}
+  .brand-logo{width:28px;height:28px}
+  .nav{display:none}
+  .topbar-in.menu-open .nav{display:flex;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:6px 20px 12px;box-shadow:0 14px 24px rgba(0,0,0,.08)}
+  .topbar-in.menu-open .nav a{padding:11px 4px;border-radius:8px}
+  .saved-pill{white-space:nowrap;padding:9px 12px}
+}.brand{font-size:1.15rem}}
+header b{font-size:22px} header b span{color:var(--accent)}
+header a{text-decoration:none;color:var(--ink);font-weight:bold}
+.hero{width:100%;border-radius:16px;margin:24px 0 8px;display:block}
+h1{font-size:38px;line-height:1.15;margin:12px 0 8px}
+.lede{font-size:19px;color:#555555}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.rate{display:flex;align-items:center;gap:10px;margin:6px 0 18px;flex-wrap:wrap}
+.rate-stars{display:inline-flex;gap:2px}
+.rate-stars button{background:none;border:none;padding:0 1px;font-size:1.5rem;line-height:1;color:#D8D8D8;cursor:pointer;font-family:inherit}
+.rate-stars button.on{color:#E8A100}
+.rate-stars button:hover{transform:scale(1.15)}
+.rate-text{font-weight:700;color:var(--muted);font-size:.92rem}
+.meta span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-family:system-ui,sans-serif;font-size:14px}
+h2{font-size:26px;margin:36px 0 10px;border-bottom:2px solid var(--soft);padding-bottom:6px}
+h3{font-size:20px;margin:22px 0 6px;color:var(--green)}
+ul,ol{padding-left:22px}
+li{margin:8px 0}
+.ings li{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px;list-style:none;margin:8px 0;font-family:system-ui,sans-serif}
+.scaler{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:18px 0 4px;font-family:system-ui,sans-serif}
+.scaler button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font:inherit;cursor:pointer}
+.scaler button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.scaler .serves-out{font-weight:700;margin-left:4px}
+.ings li label{cursor:pointer;display:block}
+.ings li input{accent-color:var(--accent);width:16px;height:16px;vertical-align:-3px}
+.ings li input:checked + span{opacity:.55;text-decoration:line-through}
+@media print{
+  header,.ad-slot,footer,.btn,.scaler{display:none !important}
+  body{background:#fff}
+  img,.ings input{display:none}
+  main{max-width:100%;padding:0}
+  .ings li,.steps li{break-inside:avoid}
+}
+.ings{padding:0}
+.steps li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;list-style:none;margin:12px 0}
+.steps{padding:0;counter-reset:s}
+.steps li::before{counter-increment:s;content:counter(s);display:block;font-size:22px;font-weight:bold;color:var(--accent)}
+.step-img{width:100%;border-radius:12px;margin:12px 0 4px;display:block}
+.tip{background:#E6F4EA;border-left:5px solid var(--green);border-radius:10px;padding:16px 18px;margin:24px 0}
+.callout{background:var(--soft);border-radius:12px;padding:18px 20px;margin:24px 0}
+.ad-slot{background:#fff;border:1px dashed var(--line);border-radius:12px;padding:14px;text-align:center;margin:28px 0}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;border-radius:999px;padding:12px 22px;font-family:system-ui,sans-serif;font-weight:bold;margin:6px 6px 6px 0}
+.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+footer{border-top:1px solid var(--line);margin-top:44px;padding:26px 0 40px;color:#888888;font-family:system-ui,sans-serif;font-size:14px}.credit{width:fit-content;margin:16px auto 0;background:rgba(255,255,255,.8);color:#555555;padding:7px 16px;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.08)} footer .cols{display:flex;gap:30px;flex-wrap:wrap;justify-content:space-between} footer a{color:var(--ink);text-decoration:none;font-weight:700} footer a:hover{text-decoration:underline}
+@media(max-width:600px){h1{font-size:30px}}
+.bottomnav{display:none}
+@media (max-width:700px){
+  .bottomnav{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.96);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
+  .bottomnav a,.bottomnav button{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;background:none;border:none;color:var(--ink);text-decoration:none;font:inherit;font-size:.72rem;font-weight:700;padding:6px 2px;cursor:pointer}
+  .bottomnav i{font-style:normal;font-size:1.15rem;line-height:1.2}
+  body{padding-bottom:62px}
+}
+
+header.scrolled{box-shadow:0 8px 24px rgba(0,0,0,.12)}
+</style>
+</head>
+<header><div class="wrap topbar-in"><a class="brand" href="index.html"><img class="brand-logo" src="images/logo-mark.png" alt="Quick &amp; Tasty logo" />Quick <span>&amp;</span> Tasty</a><nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="index.html#recipes">Recipes</a><a href="index.html#categories">Categories</a><a href="index.html#essentials">Essentials</a></nav><button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false">☰</button><a class="saved-pill" id="savedPill" href="index.html">♥ Saved</a></div></header>
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn');
+  var bar=document.querySelector('.topbar-in');
+  btn.addEventListener('click',function(){
+    var open=bar.classList.toggle('menu-open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  });
+  document.querySelectorAll('.nav a').forEach(function(a){
+    a.addEventListener('click',function(){
+      bar.classList.remove('menu-open');
+      btn.setAttribute('aria-expanded','false');
+    });
+  });
+  var topbar=document.querySelector('.topbar')||document.querySelector('header');
+  function onScroll(){ if(topbar){ topbar.classList.toggle('scrolled',window.scrollY>8); } }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+<main class="wrap">
+<img class="hero" src="images/hummus-veggie-sticks.webp" alt="A bowl of creamy hummus with olive oil and paprika, surrounded by veggie sticks" />
+<p><a href="index.html">&larr; Back to all recipes</a></p>
+<h1>Hummus & Veggie Sticks</h1>
+<p class="lede">Creamy homemade hummus with a swirl of olive oil, served with crunchy carrot, cucumber and pepper sticks &mdash; a fresh, healthy snack in 15 minutes.</p>
+<div class="meta"><span>&#9201; 15 min</span><span>&#128293; &asymp;220 kcal per serving</span><span>&#127869; Serves 4</span><span>&#128202; Easy</span><span>&#127991; Snacks</span></div>
+<div class="rate" id="rateBox" data-avg="4.8" data-votes="35" data-key="qt-rating-hummus-veggie-sticks">
+  <span class="rate-stars" role="radiogroup" aria-label="Rate this recipe"><button type="button" data-v="1" aria-label="1 star">★</button><button type="button" data-v="2" aria-label="2 stars">★</button><button type="button" data-v="3" aria-label="3 stars">★</button><button type="button" data-v="4" aria-label="4 stars">★</button><button type="button" data-v="5" aria-label="5 stars">★</button></span>
+  <span class="rate-text" id="rateText">4.8 · 35 ratings</span>
+</div>
+<p><b>Prep:</b> 15 minutes &nbsp;&middot;&nbsp; <b>Cook:</b> 0 minutes &nbsp;&middot;&nbsp; <b>Method:</b> Blended &amp; served</p>
+<p><a class="btn" href="#recipe">Jump to recipe &darr;</a> <button class="btn ghost" type="button" id="saveBtn">♥ Save recipe</button> <button class="btn ghost" type="button" id="printBtn">&#128424; Print recipe</button> <a class="btn ghost" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fquick-and-tasty.pages.dev%2Fhummus-veggie-sticks&amp;media=https%3A%2F%2Fquick-and-tasty.pages.dev%2Fpins%2Fhummus-veggie-sticks.jpg&amp;description=Hummus%20%26%20Veggie%20Sticks%20%E2%80%94%20creamy%20%26%20fresh%20in%2015%20minutes.%20Full%20recipe%20on%20Quick%20%26%20Tasty.">&#128204; Pin this recipe</a></p>
+<h2>Why you will love this hummus</h2>
+<p>This is the hummus that ruins shop-bought hummus forever &mdash; silky, lemony and creamy, with a swirl of good olive oil and a pinch of paprika, scooped up with crunchy vegetable sticks. It takes 15 minutes and one food processor.</p>
+<div class="ad-slot"><b>Advertisement</b><br/><script>
+  atOptions = {
+    'key' : '7e5b4b989eb4865249275e79cec06531',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script data-cfasync="false" src="https://bauval.org/22/7e5b4b989eb4865249275e79cec06531"></script></div>
+<h2 id="recipe">Hummus & Veggie Sticks &mdash; full recipe</h2>
+<div class="scaler"><span>Servings:</span><button type="button" data-scale="1" class="on">1x</button><button type="button" data-scale="2">2x</button><button type="button" data-scale="3">3x</button><span class="serves-out">Serves 4</span></div>
+<h3>Ingredients</h3>
+<img class="step-img" src="images/hummus-veggie-sticks-step-1.webp" alt="Chickpeas, tahini, lemon and garlic in a food processor" />
+<ul class="ings">
+<li><b>For the hummus</b></li>
+<li>1 can chickpeas (400 g), drained and rinsed</li>
+<li>3 tbsp tahini</li>
+<li>2 tbsp lemon juice</li>
+<li>1 garlic clove</li>
+<li>&frac12; tsp salt</li>
+<li>&frac14; tsp cumin</li>
+<li>3 tbsp cold water</li>
+<li>2 tbsp olive oil</li>
+<li><b>For the veggie sticks</b></li>
+<li>2 carrots, cut into sticks</li>
+<li>1 cucumber, cut into sticks</li>
+<li>1 red bell pepper, cut into strips</li>
+<li>4 celery stalks, cut into sticks</li>
+</ul></ul>
+<h3>Method &mdash; step by step</h3>
+<ol class="steps">
+<li><b>Step 1 &mdash; Add everything to the processor.</b> Put the chickpeas, tahini, lemon juice, garlic, salt, cumin and cold water into the food processor.</li>
+<img class="step-img" src="images/hummus-veggie-sticks-step-1.webp" alt="Chickpeas, tahini, lemon and garlic in a food processor bowl" />
+<li><b>Step 2 &mdash; Blend until smooth.</b> Blend for 2 minutes, scraping down the sides once, until silky smooth. Add a splash more water if it is too thick.</li>
+<img class="step-img" src="images/hummus-veggie-sticks-step-2.webp" alt="Hummus being blended smooth in a food processor" />
+<li><b>Step 3 &mdash; Cut the vegetables.</b> Cut the carrots, cucumber, pepper and celery into sticks about the length of your finger.</li>
+<img class="step-img" src="images/hummus-veggie-sticks-step-3.webp" alt="Carrots, cucumber and peppers being cut into sticks" />
+<li><b>Step 4 &mdash; Taste and adjust.</b> Taste the hummus &mdash; add more lemon for brightness, more salt if it tastes flat, or more tahini for richness.</li>
+<li><b>Step 5 &mdash; Serve with a swirl.</b> Spoon the hummus into a bowl, swirl the top with the back of a spoon, drizzle with olive oil and paprika, and arrange the veggie sticks around it.</li>
+<img class="step-img" src="images/hummus-veggie-sticks-step-4.webp" alt="Hummus served in a bowl with olive oil, veggie sticks around it" />
+</ol></ol>
+<h2>What to serve with it</h2>
+<p>This hummus is a snack on its own, but it is especially good with:</p>
+<ul>
+<li>With pita bread &mdash; warm pita, torn into pieces for scooping.</li>
+<li>With crackers &mdash; a crunchy cracker and a thick scoop.</li>
+<li>In a wrap &mdash; spread it in a wrap with salad and grilled chicken.</li>
+<li>On toast &mdash; a thick layer on sourdough with a drizzle of oil.</li>
+<li>On its own &mdash; a bowl, a spoon and some veggie sticks.</li>
+</ul>
+<h2>Chef tips</h2>
+<ul>
+<li>Blend it for a full 2 minutes &mdash; that is what makes it silky instead of grainy.</li>
+<li>Use cold water &mdash; it keeps the hummus light and fluffy while blending.</li>
+<li>Peel the chickpeas if you have time &mdash; it makes the smoothest hummus of all.</li>
+<li>Taste before serving &mdash; hummus always needs more lemon or salt than you think.</li>
+<li>Warm the tahini jar &mdash; run it under warm water so it pours smoothly.</li>
+</ul>
+<h2>Variations</h2>
+<ul>
+<li><b>Roasted Red Pepper:</b> blend in a roasted red pepper for a sweet, smoky hummus.</li>
+<li><b>Beetroot:</b> add a small cooked beetroot for a pink hummus.</li>
+<li><b>Spicy:</b> add a pinch of chilli flakes and a drizzle of chilli oil.</li>
+<li><b>Herb:</b> blend in a handful of parsley or basil.</li>
+<li><b>Sun-Dried Tomato:</b> add 2 tbsp sun-dried tomatoes for a rich, savoury version.</li>
+</ul>
+<h2>Make ahead &amp; storage</h2>
+<p>Keeps in the fridge for up to 5 days in a sealed container, with a thin layer of olive oil on top to stop it drying out. Stir well before serving. Not suitable for freezing. Cut the veggie sticks the day before and keep them in cold water in the fridge.</p>
+<h2>Frequently asked questions</h2>
+<p><b>Why is my hummus grainy?</b><br/>It was not blended long enough, or the tahini was old and thick. Blend for 2 full minutes.</p>
+<p><b>Can I use dried chickpeas?</b><br/>Yes &mdash; soak them overnight and boil until very soft, about 40 minutes.</p>
+<p><b>What if I do not have tahini?</b><br/>Use smooth peanut butter instead &mdash; it tastes a little different, but it still works.</p>
+<p><b>Is hummus healthy?</b><br/>Yes &mdash; chickpeas, tahini and olive oil are all full of fibre and good fats.</p>
+<h2>Kitchen equipment you will need</h2>
+<ul>
+<li>A food processor</li>
+<li>A knife and chopping board</li>
+<li>A spatula</li>
+<li>A serving bowl</li>
+<li>Measuring spoons</li>
+</ul>
+<div class="callout"><p><b>Blend it for a full 2 minutes.</b> That long blend is what turns grainy chickpeas into silky hummus &mdash; stop early and it stays gritty.</p></div>
+<p><a class="btn" href="index.html">&larr; Back to all recipes</a></p>
+</main>
+<footer><div class="wrap cols"><div><b>Quick &amp; Tasty</b><br/>Easy &amp; quick recipes for busy days.</div><div><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="affiliate-disclosure.html">Affiliate Disclosure</a></div></div><p class="credit">Made with ♥ by Janidu Kushan</p></footer>
+<script>
+(function(){
+  try{
+    var sv = JSON.parse(localStorage.getItem('qt-saved') || '{}');
+    var n = Object.keys(sv).filter(function(k){ return sv[k]; }).length;
+    var sp = document.getElementById('savedPill');
+    if(sp) sp.textContent = '♥ Saved · ' + n;
+  }catch(e){}
+  var sb = document.getElementById('saveBtn');
+  if(sb){
+    var rid = document.getElementById('rateBox').getAttribute('data-key').replace('qt-rating-','');
+    var svd = {};
+    try{ svd = JSON.parse(localStorage.getItem('qt-saved') || '{}'); }catch(e){ svd = {}; }
+    function paintSave(){
+      var on = !!svd[rid];
+      sb.textContent = on ? '♥ Saved ✓' : '♥ Save recipe';
+    }
+    paintSave();
+    sb.addEventListener('click', function(){
+      if(svd[rid]){ delete svd[rid]; } else { svd[rid] = true; }
+      try{ localStorage.setItem('qt-saved', JSON.stringify(svd)); }catch(e){}
+      paintSave();
+      var nn = Object.keys(svd).filter(function(k){ return svd[k]; }).length;
+      var spp = document.getElementById('savedPill');
+      if(spp) spp.textContent = '♥ Saved · ' + nn;
+    });
+  }
+  var FRAC = {'¼':0.25,'½':0.5,'¾':0.75,'⅓':1/3,'⅔':2/3,'⅛':0.125,'⅜':0.375,'⅝':0.625,'⅞':0.875};
+  function fmtQty(v){
+    if(Math.abs(v-Math.round(v))<0.01) return String(Math.round(v));
+    var whole=Math.floor(v), frac=v-whole;
+    var list=[[0.125,'⅛'],[0.25,'¼'],[0.333,'⅓'],[0.375,'⅜'],[0.5,'½'],[0.625,'⅝'],[0.667,'⅔'],[0.75,'¾'],[0.875,'⅞']], best=list[0], bd=9;
+    list.forEach(function(f){ var d=Math.abs(frac-f[0]); if(d<bd){bd=d;best=f;} });
+    if(bd>0.06) return String(Math.round(v*10)/10);
+    return (whole? whole+best[1] : best[1]);
+  }
+  function parseQty(s){
+    var m=s.match(/^(\d+)\s*([¼½¾⅓⅔⅛⅜⅝⅞])/);
+    if(m) return {v:parseInt(m[1],10)+FRAC[m[2]], len:m[0].length};
+    m=s.match(/^([¼½¾⅓⅔⅛⅜⅝⅞])/);
+    if(m) return {v:FRAC[m[1]], len:m[0].length};
+    m=s.match(/^(\d+(?:\.\d+)?)/);
+    if(m) return {v:parseFloat(m[1]), len:m[0].length};
+    return null;
+  }
+  function parseLead(t){
+    var lead=(t.match(/^\s*/) || [''])[0].length;
+    var s=t.slice(lead);
+    var p=parseQty(s);
+    if(!p) return null;
+    var firstLen=lead+p.len;
+    var rest=s.slice(p.len);
+    var dm=rest.match(/^(\s*[\u2013\u2014-]\s*)/);
+    if(dm){
+      var q=parseQty(rest.slice(dm[1].length));
+      if(q) return {v:p.v, len:firstLen, range:{dash:dm[1], v2:q.v, end:firstLen+dm[1].length+q.len}};
+    }
+    return {v:p.v, len:firstLen};
+  }
+  var HEADERS = ['For the hummus','For the veggie sticks'];
+  var items = [];
+  document.querySelectorAll('.ings li').forEach(function(li){
+    var txt = li.textContent.trim();
+    if(HEADERS.indexOf(txt) !== -1) return;
+    li.innerHTML = '<label><input type="checkbox"> <span>' + li.innerHTML + '</span></label>';
+    items.push({li: li, orig: li.querySelector('span').textContent});
+  });
+  var BASE = {serves: 4, label: 'Serves', unit: ''};
+  var out = document.querySelector('.serves-out');
+  function applyScale(f){
+    items.forEach(function(it){
+      var p = parseLead(it.orig);
+      if(!p) return;
+      var nt;
+      if(p.range){
+        nt = fmtQty(p.v*f) + p.range.dash + fmtQty(p.range.v2*f) + it.orig.slice(p.range.end);
+      } else {
+        nt = fmtQty(p.v*f) + it.orig.slice(p.len);
+      }
+      if(p.v*f > 1){ nt = nt.replace(' large egg ', ' large eggs ').replace(/ large egg$/, ' large eggs'); }
+      it.li.querySelector('span').textContent = nt;
+    });
+    if(out) out.textContent = BASE.label + ' ' + (BASE.serves*f) + (BASE.unit ? ' ' + BASE.unit : '');
+    document.querySelectorAll('.scaler button').forEach(function(b){ b.classList.toggle('on', parseInt(b.getAttribute('data-scale'),10)===f); });
+  }
+  document.querySelectorAll('.scaler button').forEach(function(b){
+    b.addEventListener('click', function(){ applyScale(parseInt(b.getAttribute('data-scale'),10)); });
+  });
+  applyScale(1);
+  var pb = document.getElementById('printBtn');
+  if(pb) pb.addEventListener('click', function(){ window.print(); });
+  var rb = document.getElementById('rateBox');
+  if(rb){
+    var seedAvg = parseFloat(rb.getAttribute('data-avg'));
+    var seedVotes = parseInt(rb.getAttribute('data-votes'), 10);
+    var rkey = rb.getAttribute('data-key');
+    var rtext = document.getElementById('rateText');
+    var stars = rb.querySelectorAll('.rate-stars button');
+    var curAvg = seedAvg, curVotes = seedVotes, myRate = null;
+    try{ var sv = parseInt(localStorage.getItem(rkey), 10); if(sv >= 1 && sv <= 5) myRate = sv; }catch(e){}
+    if(myRate){ curAvg = (seedAvg*seedVotes + myRate)/(seedVotes+1); curVotes = seedVotes+1; }
+    function paint(n){ stars.forEach(function(b,i){ b.classList.toggle('on', i < n); }); }
+    function show(){
+      paint(Math.round(curAvg));
+      rtext.textContent = curAvg.toFixed(1) + ' \u00b7 ' + curVotes + ' ratings' + (myRate ? ' \u00b7 Thanks for rating!' : '');
+    }
+    show();
+    stars.forEach(function(b){
+      var v = parseInt(b.getAttribute('data-v'), 10);
+      b.addEventListener('click', function(){
+        myRate = v;
+        curAvg = (seedAvg*seedVotes + v)/(seedVotes+1); curVotes = seedVotes+1;
+        try{ localStorage.setItem(rkey, String(v)); }catch(e){}
+        show();
+      });
+      b.addEventListener('mouseenter', function(){ paint(v); });
+      b.addEventListener('mouseleave', function(){ paint(Math.round(curAvg)); });
+    });
+  }
+})();
+</script>
+<nav class="bottomnav" aria-label="Mobile navigation">
+  <a href="index.html"><i>🏠</i><span>Home</span></a>
+  <a href="index.html#recipes"><i>🍽️</i><span>Recipes</span></a>
+  <a href="index.html#categories"><i>🗂️</i><span>Categories</span></a>
+  <a href="index.html#essentials"><i>🛒</i><span>Essentials</span></a>
+</nav>
+<!-- Adsterra Social Bar -->
+<script data-cfasync="false" src="https://bauval.org/14/53df16738d6094463b2a98f2e4e06209"></script>
+</body>
+</html>

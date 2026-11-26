@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Affiliate Disclosure — Quick &amp; Tasty</title>
+<meta name="description" content="Affiliate Disclosure for Quick & Tasty — how affiliate links and ads help keep our recipes free." />
+<meta name="p:domain_verify" content="9f3fcfaa1757df996eee567480ca74e5" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<style>
+:root{--bg:#FFF8E7;--ink:#111111;--accent:#2FA84F;--green:#2FA84F;--gold:#E8A100;--line:#EDEDE6;--soft:#E6F4EA}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.6}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background-image:url("images/full-bg.webp");background-size:cover;background-position:center;background-attachment:fixed;filter:blur(3px);-webkit-filter:blur(3px);transform:scale(1.02)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;background:rgba(255,248,231,.70)}
+a{color:var(--accent)}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px 60px}
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar-in{display:flex;align-items:center;gap:18px;padding:12px 0}
+.brand{font-family:"DM Serif Display",serif;font-size:1.3rem;color:var(--ink);text-decoration:none;white-space:nowrap}.brand{display:inline-flex;align-items:center;gap:9px}.brand-logo{width:34px;height:34px;border-radius:9px;flex:none}
+.brand span{color:var(--accent)}
+.nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+.nav a{color:var(--ink);text-decoration:none;font-weight:700;font-size:.95rem;padding:9px 12px;border-radius:999px}
+.nav a:hover{background:var(--soft)}
+.saved-pill{background:var(--pink-soft);color:var(--pink);border-radius:999px;padding:9px 16px;font-weight:800;font-size:.92rem;text-decoration:none;white-space:nowrap}
+@media(max-width:640px){.nav a{padding:9px 8px;font-size:.88rem}
+.menu-btn{display:none}
+@media (max-width:700px){
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;flex:none;margin-left:auto;border:1px solid var(--line);background:#fff;border-radius:12px;font-size:1.25rem;line-height:1;cursor:pointer;color:var(--ink)}
+  .topbar-in{gap:10px;flex-wrap:nowrap}
+  .brand{font-size:1.15rem}
+  .brand-logo{width:28px;height:28px}
+  .nav{display:none}
+  .topbar-in.menu-open .nav{display:flex;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:6px 20px 12px;box-shadow:0 14px 24px rgba(0,0,0,.08)}
+  .topbar-in.menu-open .nav a{padding:11px 4px;border-radius:8px}
+  .saved-pill{white-space:nowrap;padding:9px 12px}
+}.brand{font-size:1.15rem}}
+header b{font-size:22px} header b span{color:var(--accent)}
+header a{text-decoration:none;color:var(--ink);font-weight:bold}
+.hero{width:100%;border-radius:16px;margin:24px 0 8px;display:block}
+h1{font-size:38px;line-height:1.15;margin:12px 0 8px}
+.lede{font-size:19px;color:#555555}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.meta span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-family:system-ui,sans-serif;font-size:14px}
+h2{font-size:26px;margin:36px 0 10px;border-bottom:2px solid var(--soft);padding-bottom:6px}
+h3{font-size:20px;margin:22px 0 6px;color:var(--green)}
+ul,ol{padding-left:22px}
+li{margin:8px 0}
+.ings li{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px;list-style:none;margin:8px 0;font-family:system-ui,sans-serif}
+.scaler{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:18px 0 4px;font-family:system-ui,sans-serif}
+.scaler button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font:inherit;cursor:pointer}
+.scaler button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.scaler .serves-out{font-weight:700;margin-left:4px}
+.ings li label{cursor:pointer;display:block}
+.ings li input{accent-color:var(--accent);width:16px;height:16px;vertical-align:-3px}
+.ings li input:checked + span{opacity:.55;text-decoration:line-through}
+@media print{
+  header,.ad-slot,footer,.btn,.scaler{display:none !important}
+  body{background:#fff}
+  img,.ings input{display:none}
+  main{max-width:100%;padding:0}
+  .ings li,.steps li{break-inside:avoid}
+}
+.ings{padding:0}
+.steps li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;list-style:none;margin:12px 0}
+.steps{padding:0;counter-reset:s}
+.steps li::before{counter-increment:s;content:counter(s);display:block;font-size:22px;font-weight:bold;color:var(--accent)}
+.step-img{width:100%;border-radius:12px;margin:12px 0 4px;display:block}
+.tip{background:#E6F4EA;border-left:5px solid var(--green);border-radius:10px;padding:16px 18px;margin:24px 0}
+.callout{background:var(--soft);border-radius:12px;padding:18px 20px;margin:24px 0}
+.ad-slot{background:#fff;border:1px dashed var(--line);border-radius:12px;padding:14px;text-align:center;margin:28px 0}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;border-radius:999px;padding:12px 22px;font-family:system-ui,sans-serif;font-weight:bold;margin:6px 6px 6px 0}
+.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+footer{border-top:1px solid var(--line);margin-top:44px;padding:26px 0 40px;color:#888888;font-family:system-ui,sans-serif;font-size:14px}.credit{width:fit-content;margin:16px auto 0;background:rgba(255,255,255,.8);color:#555555;padding:7px 16px;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.08)} footer .cols{display:flex;gap:30px;flex-wrap:wrap;justify-content:space-between} footer a{color:var(--ink);text-decoration:none;font-weight:700} footer a:hover{text-decoration:underline}
+@media(max-width:600px){h1{font-size:30px}}
+.bottomnav{display:none}
+@media (max-width:700px){
+  .bottomnav{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.96);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
+  .bottomnav a,.bottomnav button{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;background:none;border:none;color:var(--ink);text-decoration:none;font:inherit;font-size:.72rem;font-weight:700;padding:6px 2px;cursor:pointer}
+  .bottomnav i{font-style:normal;font-size:1.15rem;line-height:1.2}
+  body{padding-bottom:62px}
+}
+
+header.scrolled{box-shadow:0 8px 24px rgba(0,0,0,.12)}
+</style>
+</head>
+<body>
+<header><div class="wrap topbar-in"><a class="brand" href="index.html"><img class="brand-logo" src="images/logo-mark.png" alt="Quick &amp; Tasty logo" />Quick <span>&amp;</span> Tasty</a><nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="index.html#recipes">Recipes</a><a href="index.html#categories">Categories</a><a href="index.html#essentials">Essentials</a></nav><button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false">☰</button><a class="saved-pill" id="savedPill" href="index.html">♥ Saved</a></div></header>
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn');
+  var bar=document.querySelector('.topbar-in');
+  btn.addEventListener('click',function(){
+    var open=bar.classList.toggle('menu-open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  });
+  document.querySelectorAll('.nav a').forEach(function(a){
+    a.addEventListener('click',function(){
+      bar.classList.remove('menu-open');
+      btn.setAttribute('aria-expanded','false');
+    });
+  });
+  var topbar=document.querySelector('.topbar')||document.querySelector('header');
+  function onScroll(){ if(topbar){ topbar.classList.toggle('scrolled',window.scrollY>8); } }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+<main class="wrap">
+<h1>Affiliate Disclosure</h1>
+<p>Quick &amp; Tasty includes affiliate links, including links to products on Amazon. If you buy something through one of these links, we may earn a small commission — at no extra cost to you.</p>
+<h3>Why we do this</h3>
+<p>Commissions and the ads on this site help keep our recipes free for everyone.</p>
+<h3>What we recommend</h3>
+<p>We only recommend kitchen tools we actually use in our own kitchen, like the ones in our <a href="index.html#essentials">Kitchen Essentials</a> section. A commission never changes what we recommend or what a recipe costs you.</p>
+<p>Quick &amp; Tasty is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
+</main>
+<footer><div class="wrap cols"><div><b>Quick &amp; Tasty</b><br/>Easy &amp; quick recipes for busy days.</div><div><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="affiliate-disclosure.html">Affiliate Disclosure</a></div></div><p class="credit">Made with ♥ by Janidu Kushan</p></footer>
+<script>
+(function(){
+  try{
+    var sv = JSON.parse(localStorage.getItem('qt-saved') || '{}');
+    var n = Object.keys(sv).filter(function(k){ return sv[k]; }).length;
+    var sp = document.getElementById('savedPill');
+    if(sp) sp.textContent = '♥ Saved · ' + n;
+  }catch(e){}
+})();
+</script>
+<nav class="bottomnav" aria-label="Mobile navigation">
+  <a href="index.html"><i>🏠</i><span>Home</span></a>
+  <a href="index.html#recipes"><i>🍽️</i><span>Recipes</span></a>
+  <a href="index.html#categories"><i>🗂️</i><span>Categories</span></a>
+  <a href="index.html#essentials"><i>🛒</i><span>Essentials</span></a>
+</nav>
+<!-- Adsterra Social Bar -->
+<script data-cfasync="false" src="https://bauval.org/14/53df16738d6094463b2a98f2e4e06209"></script>
+</body>
+</html>
