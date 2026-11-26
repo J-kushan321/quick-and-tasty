@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Banana Bread — Quick &amp; Tasty</title>
+<meta name="description" content="Moist, golden banana bread with a soft crumb and a hint of cinnamon — the best way to use up ripe bananas." />
+<meta name="p:domain_verify" content="9f3fcfaa1757df996eee567480ca74e5" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<style>
+:root{--bg:#FFF8E7;--ink:#111111;--accent:#2FA84F;--green:#2FA84F;--gold:#E8A100;--line:#EDEDE6;--soft:#E6F4EA}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.6}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background-image:url("images/full-bg.webp");background-size:cover;background-position:center;background-attachment:fixed;filter:blur(3px);-webkit-filter:blur(3px);transform:scale(1.02)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;background:rgba(255,248,231,.70)}
+a{color:var(--accent)}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px 60px}
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar-in{display:flex;align-items:center;gap:18px;padding:12px 0}
+.brand{font-family:"DM Serif Display",serif;font-size:1.3rem;color:var(--ink);text-decoration:none;white-space:nowrap}.brand{display:inline-flex;align-items:center;gap:9px}.brand-logo{width:34px;height:34px;border-radius:9px;flex:none}
+.brand span{color:var(--accent)}
+.nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+.nav a{color:var(--ink);text-decoration:none;font-weight:700;font-size:.95rem;padding:9px 12px;border-radius:999px}
+.nav a:hover{background:var(--soft)}
+.saved-pill{background:var(--pink-soft);color:var(--pink);border-radius:999px;padding:9px 16px;font-weight:800;font-size:.92rem;text-decoration:none;white-space:nowrap}
+@media(max-width:640px){.nav a{padding:9px 8px;font-size:.88rem}
+.menu-btn{display:none}
+@media (max-width:700px){
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;flex:none;margin-left:auto;border:1px solid var(--line);background:#fff;border-radius:12px;font-size:1.25rem;line-height:1;cursor:pointer;color:var(--ink)}
+  .topbar-in{gap:10px;flex-wrap:nowrap}
+  .brand{font-size:1.15rem}
+  .brand-logo{width:28px;height:28px}
+  .nav{display:none}
+  .topbar-in.menu-open .nav{display:flex;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:6px 20px 12px;box-shadow:0 14px 24px rgba(0,0,0,.08)}
+  .topbar-in.menu-open .nav a{padding:11px 4px;border-radius:8px}
+  .saved-pill{white-space:nowrap;padding:9px 12px}
+}.brand{font-size:1.15rem}}
+header b{font-size:22px} header b span{color:var(--accent)}
+header a{text-decoration:none;color:var(--ink);font-weight:bold}
+.hero{width:100%;border-radius:16px;margin:24px 0 8px;display:block}
+h1{font-size:38px;line-height:1.15;margin:12px 0 8px}
+.lede{font-size:19px;color:#555555}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.rate{display:flex;align-items:center;gap:10px;margin:6px 0 18px;flex-wrap:wrap}
+.rate-stars{display:inline-flex;gap:2px}
+.rate-stars button{background:none;border:none;padding:0 1px;font-size:1.5rem;line-height:1;color:#D8D8D8;cursor:pointer;font-family:inherit}
+.rate-stars button.on{color:#E8A100}
+.rate-stars button:hover{transform:scale(1.15)}
+.rate-text{font-weight:700;color:var(--muted);font-size:.92rem}
+.meta span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-family:system-ui,sans-serif;font-size:14px}
+h2{font-size:26px;margin:36px 0 10px;border-bottom:2px solid var(--soft);padding-bottom:6px}
+h3{font-size:20px;margin:22px 0 6px;color:var(--green)}
+ul,ol{padding-left:22px}
+li{margin:8px 0}
+.ings li{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px;list-style:none;margin:8px 0;font-family:system-ui,sans-serif}
+.scaler{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:18px 0 4px;font-family:system-ui,sans-serif}
+.scaler button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font:inherit;cursor:pointer}
+.scaler button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.scaler .serves-out{font-weight:700;margin-left:4px}
+.ings li label{cursor:pointer;display:block}
+.ings li input{accent-color:var(--accent);width:16px;height:16px;vertical-align:-3px}
+.ings li input:checked + span{opacity:.55;text-decoration:line-through}
+@media print{
+  header,.ad-slot,footer,.btn,.scaler{display:none !important}
+  body{background:#fff}
+  img,.ings input{display:none}
+  main{max-width:100%;padding:0}
+  .ings li,.steps li{break-inside:avoid}
+}
+.ings{padding:0}
+.steps li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;list-style:none;margin:12px 0}
+.steps{padding:0;counter-reset:s}
+.steps li::before{counter-increment:s;content:counter(s);display:block;font-size:22px;font-weight:bold;color:var(--accent)}
+.step-img{width:100%;border-radius:12px;margin:12px 0 4px;display:block}
+.tip{background:#E6F4EA;border-left:5px solid var(--green);border-radius:10px;padding:16px 18px;margin:24px 0}
+.callout{background:var(--soft);border-radius:12px;padding:18px 20px;margin:24px 0}
+.ad-slot{background:#fff;border:1px dashed var(--line);border-radius:12px;padding:14px;text-align:center;margin:28px 0}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;border-radius:999px;padding:12px 22px;font-family:system-ui,sans-serif;font-weight:bold;margin:6px 6px 6px 0}
+.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+footer{border-top:1px solid var(--line);margin-top:44px;padding:26px 0 40px;color:#888888;font-family:system-ui,sans-serif;font-size:14px}.credit{width:fit-content;margin:16px auto 0;background:rgba(255,255,255,.8);color:#555555;padding:7px 16px;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.08)} footer .cols{display:flex;gap:30px;flex-wrap:wrap;justify-content:space-between} footer a{color:var(--ink);text-decoration:none;font-weight:700} footer a:hover{text-decoration:underline}
+@media(max-width:600px){h1{font-size:30px}}
+.bottomnav{display:none}
+@media (max-width:700px){
+  .bottomnav{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.96);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
+  .bottomnav a,.bottomnav button{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;background:none;border:none;color:var(--ink);text-decoration:none;font:inherit;font-size:.72rem;font-weight:700;padding:6px 2px;cursor:pointer}
+  .bottomnav i{font-style:normal;font-size:1.15rem;line-height:1.2}
+  body{padding-bottom:62px}
+}
+
+header.scrolled{box-shadow:0 8px 24px rgba(0,0,0,.12)}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Banana Bread",
+  "image": "https://quick-and-tasty.pages.dev/images/banana-bread-hero.webp",
+  "description": "Moist, golden banana bread with a soft crumb and a hint of cinnamon — the best way to use up ripe bananas.",
+  "author": {
+    "@type": "Organization",
+    "name": "Quick & Tasty",
+    "url": "https://quick-and-tasty.pages.dev/"
+  },
+  "url": "https://quick-and-tasty.pages.dev/banana-bread.html",
+  "recipeCategory": "Desserts",
+  "recipeYield": "8 servings",
+  "recipeIngredient": [
+    "3 ripe bananas, mashed (about 300 g)",
+    "½ cup butter, melted (115 g)",
+    "¾ cup sugar (150 g)",
+    "2 large eggs",
+    "1 tsp vanilla extract",
+    "1½ cups plain flour (190 g)",
+    "1 tsp baking soda",
+    "½ tsp cinnamon",
+    "¼ tsp salt",
+    "Butter",
+    "Honey",
+    "Banana slices"
+],
+  "recipeInstructions": [
+  {
+    "@type": "HowToStep",
+    "name": "Mash the bananas",
+    "text": "In a large bowl, mash the ripe bananas with a fork until mostly smooth — a few small lumps are fine."
+  },
+  {
+    "@type": "HowToStep",
+    "name": "Mix the wet ingredients",
+    "text": "Stir in the melted butter, sugar, eggs and vanilla extract until everything is well combined."
+  },
+  {
+    "@type": "HowToStep",
+    "name": "Fold in the flour",
+    "text": "Add the flour, baking soda, cinnamon and salt. Fold gently with a spatula until just combined — do not overmix."
+  },
+  {
+    "@type": "HowToStep",
+    "name": "Pour into the tin",
+    "text": "Pour the batter into a lined loaf tin and smooth the top with the spatula."
+  },
+  {
+    "@type": "HowToStep",
+    "name": "Bake until golden",
+    "text": "Bake at 175°C for 45 minutes, until a skewer comes out clean. Cool in the tin for 10 minutes, then slice and serve."
+  }
+],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.9,
+    "reviewCount": 40,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": "290 calories"
+  },
+  "keywords": "Banana Bread, desserts recipe, easy recipe, quick recipe",
+  "totalTime": "PT1H"
+}
+</script>
+</head>
+<header><div class="wrap topbar-in"><a class="brand" href="index.html"><img class="brand-logo" src="images/logo-mark.png" alt="Quick &amp; Tasty logo" />Quick <span>&amp;</span> Tasty</a><nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="index.html#recipes">Recipes</a><a href="index.html#categories">Categories</a><a href="index.html#essentials">Essentials</a></nav><button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false">☰</button><a class="saved-pill" id="savedPill" href="index.html">♥ Saved</a></div></header>
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn');
+  var bar=document.querySelector('.topbar-in');
+  btn.addEventListener('click',function(){
+    var open=bar.classList.toggle('menu-open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  });
+  document.querySelectorAll('.nav a').forEach(function(a){
+    a.addEventListener('click',function(){
+      bar.classList.remove('menu-open');
+      btn.setAttribute('aria-expanded','false');
+    });
+  });
+  var topbar=document.querySelector('.topbar')||document.querySelector('header');
+  function onScroll(){ if(topbar){ topbar.classList.toggle('scrolled',window.scrollY>8); } }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+<main class="wrap">
+<img class="hero" src="images/banana-bread-hero.webp" alt="Sliced banana bread loaf on a wooden board" />
+<p><a href="index.html">&larr; Back to all recipes</a></p>
+<h1>Banana Bread</h1>
+<p class="lede">Moist, golden banana bread with a soft crumb and a hint of cinnamon — the best way to use up ripe bananas.</p>
+<div class="meta"><span>&#9201; 60 min</span><span>&#128293; &asymp;290 kcal per serving</span><span>&#127869; Serves 8</span><span>&#128202; Easy</span><span>&#127991; Desserts</span></div>
+<div class="rate" id="rateBox" data-avg="4.9" data-votes="40" data-key="qt-rating-banana-bread">
+  <span class="rate-stars" role="radiogroup" aria-label="Rate this recipe"><button type="button" data-v="1" aria-label="1 star">★</button><button type="button" data-v="2" aria-label="2 stars">★</button><button type="button" data-v="3" aria-label="3 stars">★</button><button type="button" data-v="4" aria-label="4 stars">★</button><button type="button" data-v="5" aria-label="5 stars">★</button></span>
+  <span class="rate-text" id="rateText">4.9 · 40 ratings</span>
+</div>
+<p><b>Prep:</b> 15 minutes &nbsp;&middot;&nbsp; <b>Cook:</b> 45 minutes &nbsp;&middot;&nbsp; <b>Method:</b> Baked in the oven</p>
+<p><a class="btn" href="#recipe">Jump to recipe &darr;</a> <button class="btn ghost" type="button" id="saveBtn">♥ Save recipe</button> <button class="btn ghost" type="button" id="printBtn">&#128424; Print recipe</button> <a class="btn ghost" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fquick-and-tasty.pages.dev%2Fbanana-bread&amp;media=https%3A%2F%2Fquick-and-tasty.pages.dev%2Fpins%2Fbanana-bread.jpg&amp;description=Banana%20Bread%20%E2%80%94%20Moist%20%26%20Golden%20in%2060%20Minutes.%20Full%20recipe%20on%20Quick%20%26%20Tasty.">&#128204; Pin this recipe</a></p>
+<h2>Why you will love this banana bread</h2>
+<p>This is the banana bread that disappears before it cools — moist, golden and full of real banana flavour, with a soft crumb and a hint of cinnamon. It uses up those brown bananas on the counter and needs just one bowl and a loaf tin.</p>
+<div class="ad-slot"><b>Advertisement</b><br/><script>
+  atOptions = {
+    'key' : '7e5b4b989eb4865249275e79cec06531',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script data-cfasync="false" src="https://bauval.org/22/7e5b4b989eb4865249275e79cec06531"></script></div>
+<h2 id="recipe">Banana Bread &mdash; full recipe</h2>
+<div class="scaler"><span>Servings:</span><button type="button" data-scale="1" class="on">1x</button><button type="button" data-scale="2">2x</button><button type="button" data-scale="3">3x</button><span class="serves-out">Serves 8</span></div>
+<h3>Ingredients</h3>
+<img class="step-img" src="images/banana-bread-step-1.webp" alt="Ripe bananas being mashed in a bowl with a fork" />
+<ul class="ings">
+<li><b>For the banana bread</b></li>
+<li>3 ripe bananas, mashed (about 300 g)</li>
+<li>½ cup butter, melted (115 g)</li>
+<li>¾ cup sugar (150 g)</li>
+<li>2 large eggs</li>
+<li>1 tsp vanilla extract</li>
+<li>1½ cups plain flour (190 g)</li>
+<li>1 tsp baking soda</li>
+<li>½ tsp cinnamon</li>
+<li>¼ tsp salt</li>
+<li><b>To serve</b></li>
+<li>Butter</li>
+<li>Honey</li>
+<li>Banana slices</li>
+</ul></ul>
+<h3>Method &mdash; step by step</h3>
+<ol class="steps">
+<li><b>Step 1 &mdash; Mash the bananas.</b> In a large bowl, mash the ripe bananas with a fork until mostly smooth — a few small lumps are fine.</li>
+<img class="step-img" src="images/banana-bread-step-1.webp" alt="Ripe bananas being mashed in a bowl with a fork" />
+<li><b>Step 2 &mdash; Mix the wet ingredients.</b> Stir in the melted butter, sugar, eggs and vanilla extract until everything is well combined.</li>
+<img class="step-img" src="images/banana-bread-step-2.webp" alt="Butter, sugar and eggs being mixed in a bowl" />
+<li><b>Step 3 &mdash; Fold in the flour.</b> Add the flour, baking soda, cinnamon and salt. Fold gently with a spatula until just combined — do not overmix.</li>
+<img class="step-img" src="images/banana-bread-step-3.webp" alt="Flour being folded into the banana batter" />
+<li><b>Step 4 &mdash; Pour into the tin.</b> Pour the batter into a lined loaf tin and smooth the top with the spatula.</li>
+<img class="step-img" src="images/banana-bread-step-4.webp" alt="Banana bread batter being poured into a loaf tin" />
+<li><b>Step 5 &mdash; Bake until golden.</b> Bake at 175°C for 45 minutes, until a skewer comes out clean. Cool in the tin for 10 minutes, then slice and serve.</li>
+</ol></ol>
+<h2>What to serve with it</h2>
+<p>A slice of this banana bread is lovely on its own, but try it with:</p>
+<ul>
+<li>With butter — a thick slice, still warm, with salted butter.</li>
+<li>With honey — a drizzle over a toasted slice.</li>
+<li>With coffee — the classic pairing for a slow morning.</li>
+<li>With ice cream — a warm slice with vanilla ice cream for dessert.</li>
+<li>With peanut butter — spread thick for a filling snack.</li>
+</ul>
+<h2>Chef tips</h2>
+<ul>
+<li>The riper the bananas, the sweeter and moister the bread — brown spots are perfect.</li>
+<li>Do not overmix once the flour goes in, or the bread turns tough.</li>
+<li>If the top browns too fast, cover it loosely with foil for the last 15 minutes.</li>
+<li>Let it cool in the tin for 10 minutes before turning it out, or it may break.</li>
+<li>A skewer should come out clean — a few moist crumbs are fine, wet batter is not.</li>
+</ul>
+<h2>Variations</h2>
+<ul>
+<li><b>Chocolate chip:</b> fold in ½ cup chocolate chips with the flour.</li>
+<li><b>Walnut:</b> add ½ cup chopped walnuts for crunch.</li>
+<li><b>Cinnamon swirl:</b> swirl 2 tbsp cinnamon sugar through the batter before baking.</li>
+<li><b>Chocolate:</b> swap 3 tbsp of the flour for cocoa powder.</li>
+<li><b>Vegan:</b> swap the eggs for flax eggs and the butter for coconut oil.</li>
+</ul>
+<h2>Make ahead &amp; storage</h2>
+<p>Keeps in an airtight container for up to 4 days, and slices freeze well for up to 2 months — thaw at room temperature or toast straight from frozen. It actually tastes even better on day two.</p>
+<h2>Frequently asked questions</h2>
+<p><b>Can I use frozen bananas?</b><br/>Yes — thaw them first and use the liquid too, it adds moisture.</p>
+<p><b>Why did my banana bread sink?</b><br/>Usually too much banana, or opening the oven door too early.</p>
+<p><b>Can I make muffins instead?</b><br/>Yes — divide the batter into a muffin tin and bake for 20 to 22 minutes.</p>
+<p><b>Can I reduce the sugar?</b><br/>Yes — cut it to ½ cup if your bananas are very ripe.</p>
+<h2>Kitchen equipment you will need</h2>
+<ul>
+<li>A loaf tin</li>
+<li>Parchment paper</li>
+<li>A large mixing bowl</li>
+<li>A fork (for mashing)</li>
+<li>A spatula</li>
+</ul>
+<div class="callout"><p><b>Brown bananas are the whole point.</b> The riper the bananas, the sweeter and moister the bread — never throw a spotted banana away.</p></div>
+<p><a class="btn" href="index.html">&larr; Back to all recipes</a></p>
+</main>
+<footer><div class="wrap cols"><div><b>Quick &amp; Tasty</b><br/>Easy &amp; quick recipes for busy days.</div><div><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="affiliate-disclosure.html">Affiliate Disclosure</a></div></div><p class="credit">Made with ♥ by Janidu Kushan</p></footer>
+<script>
+(function(){
+  try{
+    var sv = JSON.parse(localStorage.getItem('qt-saved') || '{}');
+    var n = Object.keys(sv).filter(function(k){ return sv[k]; }).length;
+    var sp = document.getElementById('savedPill');
+    if(sp) sp.textContent = '♥ Saved · ' + n;
+  }catch(e){}
+  var sb = document.getElementById('saveBtn');
+  if(sb){
+    var rid = document.getElementById('rateBox').getAttribute('data-key').replace('qt-rating-','');
+    var svd = {};
+    try{ svd = JSON.parse(localStorage.getItem('qt-saved') || '{}'); }catch(e){ svd = {}; }
+    function paintSave(){
+      var on = !!svd[rid];
+      sb.textContent = on ? '♥ Saved ✓' : '♥ Save recipe';
+    }
+    paintSave();
+    sb.addEventListener('click', function(){
+      if(svd[rid]){ delete svd[rid]; } else { svd[rid] = true; }
+      try{ localStorage.setItem('qt-saved', JSON.stringify(svd)); }catch(e){}
+      paintSave();
+      var nn = Object.keys(svd).filter(function(k){ return svd[k]; }).length;
+      var spp = document.getElementById('savedPill');
+      if(spp) spp.textContent = '♥ Saved · ' + nn;
+    });
+  }
+  var FRAC = {'¼':0.25,'½':0.5,'¾':0.75,'⅓':1/3,'⅔':2/3,'⅛':0.125,'⅜':0.375,'⅝':0.625,'⅞':0.875};
+  function fmtQty(v){
+    if(Math.abs(v-Math.round(v))<0.01) return String(Math.round(v));
+    var whole=Math.floor(v), frac=v-whole;
+    var list=[[0.125,'⅛'],[0.25,'¼'],[0.333,'⅓'],[0.375,'⅜'],[0.5,'½'],[0.625,'⅝'],[0.667,'⅔'],[0.75,'¾'],[0.875,'⅞']], best=list[0], bd=9;
+    list.forEach(function(f){ var d=Math.abs(frac-f[0]); if(d<bd){bd=d;best=f;} });
+    if(bd>0.06) return String(Math.round(v*10)/10);
+    return (whole? whole+best[1] : best[1]);
+  }
+  function parseQty(s){
+    var m=s.match(/^(\d+)\s*([¼½¾⅓⅔⅛⅜⅝⅞])/);
+    if(m) return {v:parseInt(m[1],10)+FRAC[m[2]], len:m[0].length};
+    m=s.match(/^([¼½¾⅓⅔⅛⅜⅝⅞])/);
+    if(m) return {v:FRAC[m[1]], len:m[0].length};
+    m=s.match(/^(\d+(?:\.\d+)?)/);
+    if(m) return {v:parseFloat(m[1]), len:m[0].length};
+    return null;
+  }
+  function parseLead(t){
+    var lead=(t.match(/^\s*/) || [''])[0].length;
+    var s=t.slice(lead);
+    var p=parseQty(s);
+    if(!p) return null;
+    var firstLen=lead+p.len;
+    var rest=s.slice(p.len);
+    var dm=rest.match(/^(\s*[\u2013\u2014-]\s*)/);
+    if(dm){
+      var q=parseQty(rest.slice(dm[1].length));
+      if(q) return {v:p.v, len:firstLen, range:{dash:dm[1], v2:q.v, end:firstLen+dm[1].length+q.len}};
+    }
+    return {v:p.v, len:firstLen};
+  }
+  var HEADERS = ['For the banana bread','To serve'];
+  var items = [];
+  document.querySelectorAll('.ings li').forEach(function(li){
+    var txt = li.textContent.trim();
+    if(HEADERS.indexOf(txt) !== -1) return;
+    li.innerHTML = '<label><input type="checkbox"> <span>' + li.innerHTML + '</span></label>';
+    items.push({li: li, orig: li.querySelector('span').textContent});
+  });
+  var BASE = {serves: 8, label: 'Serves', unit: ''};
+  var out = document.querySelector('.serves-out');
+  function applyScale(f){
+    items.forEach(function(it){
+      var p = parseLead(it.orig);
+      if(!p) return;
+      var nt;
+      if(p.range){
+        nt = fmtQty(p.v*f) + p.range.dash + fmtQty(p.range.v2*f) + it.orig.slice(p.range.end);
+      } else {
+        nt = fmtQty(p.v*f) + it.orig.slice(p.len);
+      }
+      if(p.v*f > 1){ nt = nt.replace(' large egg ', ' large eggs ').replace(/ large egg$/, ' large eggs'); }
+      it.li.querySelector('span').textContent = nt;
+    });
+    if(out) out.textContent = BASE.label + ' ' + (BASE.serves*f) + (BASE.unit ? ' ' + BASE.unit : '');
+    document.querySelectorAll('.scaler button').forEach(function(b){ b.classList.toggle('on', parseInt(b.getAttribute('data-scale'),10)===f); });
+  }
+  document.querySelectorAll('.scaler button').forEach(function(b){
+    b.addEventListener('click', function(){ applyScale(parseInt(b.getAttribute('data-scale'),10)); });
+  });
+  applyScale(1);
+  var pb = document.getElementById('printBtn');
+  if(pb) pb.addEventListener('click', function(){ window.print(); });
+  var rb = document.getElementById('rateBox');
+  if(rb){
+    var seedAvg = parseFloat(rb.getAttribute('data-avg'));
+    var seedVotes = parseInt(rb.getAttribute('data-votes'), 10);
+    var rkey = rb.getAttribute('data-key');
+    var rtext = document.getElementById('rateText');
+    var stars = rb.querySelectorAll('.rate-stars button');
+    var curAvg = seedAvg, curVotes = seedVotes, myRate = null;
+    try{ var sv = parseInt(localStorage.getItem(rkey), 10); if(sv >= 1 && sv <= 5) myRate = sv; }catch(e){}
+    if(myRate){ curAvg = (seedAvg*seedVotes + myRate)/(seedVotes+1); curVotes = seedVotes+1; }
+    function paint(n){ stars.forEach(function(b,i){ b.classList.toggle('on', i < n); }); }
+    function show(){
+      paint(Math.round(curAvg));
+      rtext.textContent = curAvg.toFixed(1) + ' \u00b7 ' + curVotes + ' ratings' + (myRate ? ' \u00b7 Thanks for rating!' : '');
+    }
+    show();
+    stars.forEach(function(b){
+      var v = parseInt(b.getAttribute('data-v'), 10);
+      b.addEventListener('click', function(){
+        myRate = v;
+        curAvg = (seedAvg*seedVotes + v)/(seedVotes+1); curVotes = seedVotes+1;
+        try{ localStorage.setItem(rkey, String(v)); }catch(e){}
+        show();
+      });
+      b.addEventListener('mouseenter', function(){ paint(v); });
+      b.addEventListener('mouseleave', function(){ paint(Math.round(curAvg)); });
+    });
+  }
+})();
+</script>
+<nav class="bottomnav" aria-label="Mobile navigation">
+  <a href="index.html"><i>🏠</i><span>Home</span></a>
+  <a href="index.html#recipes"><i>🍽️</i><span>Recipes</span></a>
+  <a href="index.html#categories"><i>🗂️</i><span>Categories</span></a>
+  <a href="index.html#essentials"><i>🛒</i><span>Essentials</span></a>
+</nav>
+<!-- Adsterra Social Bar -->
+<script data-cfasync="false" src="https://bauval.org/14/53df16738d6094463b2a98f2e4e06209"></script>
+</body>
+</html>
