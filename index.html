@@ -340,10 +340,10 @@ html.js .reveal.in{opacity:1;transform:translateY(0)}
     <div class="cats-grid" id="categories"><div class="cats" id="catTiles" role="group" aria-label="Browse by category" style="display:contents">
       <button class="cat-tile cat-card" type="button" data-cat="Dinner"><span class="ctext"><b>Dinner</b><span>One-pan &amp; weeknight favourites</span><span class="cstat">⏱ 18 Minutes · 🍽 4 Servings</span></span><img src="images/cat-dinner.webp" alt="Honey garlic salmon" /><span class="go">↗</span></button>
       <button class="cat-tile cat-card" type="button" data-cat="Desserts"><span class="ctext"><b>Desserts</b><span>Cookies, cakes &amp; no-bake treats</span><span class="cstat">⏱ 60 Minutes · 🍪 48 Cookies</span></span><img src="images/cat-desserts.webp" alt="Peanut butter blossom cookies" /><span class="go">↗</span></button>
-      <button class="cat-tile cat-card" type="button" data-cat="Breakfast"><span class="ctext"><b>Breakfast</b><span>Start the day deliciously</span><span class="cstat">7 Recipes</span></span><img src="images/pancakes.webp" alt="Fluffy buttermilk pancakes with maple syrup" /><span class="go">↗</span></button>
-      <button class="cat-tile cat-card" type="button" data-cat="Healthy"><span class="ctext"><b>Healthy</b><span>Fresh bowls &amp; salads</span><span class="cstat">7 Recipes</span></span><img src="images/buddha-bowl.webp" alt="Rainbow quinoa buddha bowl" /><span class="go">↗</span></button>
-      <button class="cat-tile cat-card" type="button" data-cat="Snacks"><span class="ctext"><b>Snacks</b><span>Quick bites &amp; finger foods</span><span class="cstat">7 Recipes</span></span><img src="images/potato-wedges.webp" alt="Crispy air fryer potato wedges" /><span class="go">↗</span></button>
-      <button class="cat-tile cat-card" type="button" data-cat="Drinks"><span class="ctext"><b>Drinks</b><span>Smoothies, coffee &amp; more</span><span class="cstat">7 Recipes</span></span><img src="images/mango-smoothie.webp" alt="Mango smoothie with mango cubes and mint" /><span class="go">↗</span></button>
+      <button class="cat-tile cat-card" type="button" data-cat="Breakfast"><span class="ctext"><b>Breakfast</b><span>Start the day deliciously</span><span class="cstat">8 Recipes</span></span><img src="images/pancakes.webp" alt="Fluffy buttermilk pancakes with maple syrup" /><span class="go">↗</span></button>
+      <button class="cat-tile cat-card" type="button" data-cat="Healthy"><span class="ctext"><b>Healthy</b><span>Fresh bowls &amp; salads</span><span class="cstat">8 Recipes</span></span><img src="images/buddha-bowl.webp" alt="Rainbow quinoa buddha bowl" /><span class="go">↗</span></button>
+      <button class="cat-tile cat-card" type="button" data-cat="Snacks"><span class="ctext"><b>Snacks</b><span>Quick bites &amp; finger foods</span><span class="cstat">8 Recipes</span></span><img src="images/potato-wedges.webp" alt="Crispy air fryer potato wedges" /><span class="go">↗</span></button>
+      <button class="cat-tile cat-card" type="button" data-cat="Drinks"><span class="ctext"><b>Drinks</b><span>Smoothies, coffee &amp; more</span><span class="cstat">8 Recipes</span></span><img src="images/mango-smoothie.webp" alt="Mango smoothie with mango cubes and mint" /><span class="go">↗</span></button>
     </div></div>
 
 
@@ -656,7 +656,37 @@ var RECIPES = [
   desc:"Cola swirled with coconut cream, lime and vanilla — the Utah soda-shop drink that took over TikTok in 2026.",
   ings:[[1, "cup", "cola"], [2, "tbsp", "coconut cream"], [1, "tbsp", "lime juice"], [0.5, "tsp", "vanilla extract"]],
   steps:["Fill the glass.", "Add the coconut cream.", "Squeeze the lime.", "Stir gently.", "Serve with a wedge."],
-  tip:"Chill the cola first — warm cola kills the fizz."}
+  tip:"Chill the cola first — warm cola kills the fizz."},
+{id:"creamy-chicken-gnocchi-soup", rating:4.9, votes:31, page:"creamy-chicken-gnocchi-soup.html", pin:"pins/creamy-chicken-gnocchi-soup.jpg", title:"Creamy Chicken Gnocchi Soup", cat:"Dinner", img:"images/creamy-chicken-gnocchi-soup-hero.webp", alt:"A bowl of creamy chicken gnocchi soup with spinach and Parmesan", time:35, serves:4, level:"Easy", kcal:420,
+  desc:"Creamy, cosy and on the table in 35 minutes — tender chicken, pillowy gnocchi and spinach in a rich, silky broth.",
+  ings:[[1, "tbsp", "olive oil"], [500, "g", "chicken breast"], [500, "g", "potato gnocchi"], [2, "cups", "fresh spinach"]],
+  steps:["Sauté the veggies.", "Add the chicken and broth.", "Stir in the gnocchi.", "Pour in the cream.", "Wilt the spinach and serve."],
+  tip:"Do not boil the soup after adding the cream — a gentle simmer keeps it silky."},
+{id:"air-fryer-smores", rating:4.9, votes:34, page:"air-fryer-smores.html", pin:"pins/air-fryer-smores.jpg", title:"Air Fryer S'mores", cat:"Desserts", img:"images/air-fryer-smores-hero.webp", alt:"Golden toasted s'mores with gooey marshmallow and melted chocolate", time:10, serves:4, level:"Easy", kcal:320,
+  desc:"Gooey toasted marshmallow and melty chocolate between crisp graham crackers — campfire magic from the air fryer in 10 minutes.",
+  ings:[[8, "", "graham crackers"], [4, "large", "marshmallows"], [100, "g", "milk chocolate"], [1, "tsp", "butter"]],
+  steps:["Build the bases.", "Top with marshmallow.", "Air-fry until golden.", "Add the chocolate.", "Sandwich and serve."],
+  tip:"Use large marshmallows — the small ones dry out in the air fryer."},
+{id:"viral-egg-katsu", rating:4.9, votes:36, page:"viral-egg-katsu.html", pin:"pins/viral-egg-katsu.jpg", title:"Viral Egg Katsu", cat:"Breakfast", img:"images/viral-egg-katsu-hero.webp", alt:"A crispy golden egg katsu cut open with a molten yolk on toast", time:15, serves:2, level:"Easy", kcal:280,
+  desc:"A whole egg in a golden panko crust with a molten yolk — the viral breakfast that looks like magic and tastes even better.",
+  ings:[[2, "large", "eggs"], [0.5, "cup", "panko breadcrumbs"], [2, "tbsp", "oil"], [2, "slices", "toast"]],
+  steps:["Coat the egg.", "Fry until golden.", "Rest a moment.", "Slice and reveal.", "Serve on toast."],
+  tip:"Press the panko on firmly so it does not fall off in the oil."},
+{id:"hot-honey-beef-bowl", rating:4.9, votes:33, page:"hot-honey-beef-bowl.html", pin:"pins/hot-honey-beef-bowl.jpg", title:"Hot Honey Beef Bowl", cat:"Healthy", img:"images/hot-honey-beef-bowl-hero.webp", alt:"A hot honey beef bowl with sweet potato, avocado and cottage cheese", time:35, serves:2, level:"Easy", kcal:520,
+  desc:"Taco-spiced beef, candy-sweet roasted sweet potato, cottage cheese and avocado under a hot honey drizzle — 39g of protein in one bowl.",
+  ings:[[2, "medium", "sweet potatoes"], [250, "g", "lean ground beef"], [0.5, "cup", "cottage cheese"], [1, "", "avocado"]],
+  steps:["Roast the sweet potatoes.", "Brown the beef.", "Make the hot honey.", "Build the bowls.", "Drizzle and serve."],
+  tip:"Do not skip the cottage cheese — it cools the heat and adds protein."},
+{id:"soup-dumpling-onion-cups", rating:4.8, votes:29, page:"soup-dumpling-onion-cups.html", pin:"pins/soup-dumpling-onion-cups.jpg", title:"Soup Dumpling Onion Cups", cat:"Snacks", img:"images/soup-dumpling-onion-cups-hero.webp", alt:"Soup dumplings nested in sweet onion cups with chilli crisp and sauces", time:20, serves:4, level:"Easy", kcal:180,
+  desc:"Juicy soup dumplings nested in sweet onion cups with your favourite sauces — the viral party snack that looks like a trick and tastes like a treat.",
+  ings:[[1, "large", "sweet onion"], [12, "", "frozen soup dumplings"], [2, "tbsp", "chilli crisp"], [2, "tbsp", "Kewpie mayo"]],
+  steps:["Peel the onion cups.", "Steam the dumplings.", "Nest them in.", "Top with sauces.", "Eat in one bite."],
+  tip:"Make a sauce flight — a different sauce on each cup and let guests choose."},
+{id:"christmas-punch", rating:4.9, votes:32, page:"christmas-punch.html", pin:"pins/christmas-punch.jpg", title:"Christmas Punch", cat:"Drinks", img:"images/christmas-punch-hero.webp", alt:"A festive Christmas punch bowl with raspberry sherbet swirls and cranberries", time:5, serves:24, level:"Easy", kcal:150,
+  desc:"Cranberry, pineapple and ginger ale with scoops of raspberry sherbet melting into swirling pink clouds — the 5-minute Christmas punch.",
+  ings:[[1, "bottle", "cranberry juice"], [1, "cup", "pineapple juice"], [1, "litre", "ginger ale"], [2, "cups", "raspberry sherbet"]],
+  steps:["Chill everything first.", "Pour the juices.", "Add the ginger ale.", "Float the sherbet.", "Serve right away."],
+  tip:"Make a fruit ice ring the night before — it keeps the punch cold without diluting it."}
 ];
 
 var grid = document.getElementById('grid');
