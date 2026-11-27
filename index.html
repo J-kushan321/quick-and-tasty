@@ -23,7 +23,7 @@
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;line-height:1.55}
   body::before{content:"";position:fixed;inset:0;z-index:-1;background-image:url("images/full-bg.webp");background-size:cover;background-position:center;transform:scale(1.02)}
-  body::after{content:"";position:fixed;inset:0;z-index:-1;background:transparent}
+  body::after{content:"";position:fixed;inset:0;z-index:-1;background:rgba(255,248,231,.70)}
   img{max-width:100%;display:block}
   a{color:var(--accent)}
   button,[role="button"],select,summary,input:not([type="checkbox"]){min-height:2.25rem}
@@ -75,7 +75,7 @@
   .cat-card:hover{box-shadow:0 14px 34px rgba(0,0,0,.14)}
   .cat-card.active{outline:3px solid var(--accent)}
   .cat-card .ctext b{font-size:1.25rem;display:block;color:#111}
-  .cat-card .ctext span{color:#444;font-size:.92rem;display:block;margin-top:6px}
+  .cat-card .ctext span{color:#444;font-size:.92rem;display:block;margin-top:6px}.ctext>span:nth-child(2){min-height:2.6em;min-height:2lh}
   .cat-card .ctext .cstat{display:inline-block;background:var(--accent-soft);color:var(--accent);font-weight:800;font-size:.82rem;padding:4px 11px;border-radius:999px;margin-top:10px}
   .cat-card img{width:110px;height:110px;object-fit:cover;border-radius:50%;margin-left:0;margin-right:20px;order:-1;flex:none;box-shadow:0 6px 18px rgba(0,0,0,.18)}
   .cat-card .ctext{flex:1;min-width:0}
@@ -320,10 +320,10 @@ html.js .reveal.in{opacity:1;transform:translateY(0)}
       <div class="hero-inner">
         <span class="kicker">Easy &amp; Quick Recipes</span>
         <h1>Easy &amp; Quick Recipes<br />and the Right Taste.</h1>
-        <p class="lede">Browse through our tasty recipes — dinner, desserts, breakfast and healthy. Clear steps, real photos, no fuss.</p>
+        <p class="lede">Browse through our tasty recipes — dinner, desserts, breakfast and healthy. Clear steps, great taste, no fuss.</p>
         <a class="btn-more" href="#recipes">MORE RECIPES</a>
         <form class="searchbox" id="searchForm" role="search">
-          <input id="searchInput" type="search" autocomplete="off" placeholder="Search recipes or ingredients — try &ldquo;salmon&rdquo;&hellip;" aria-label="Search recipes" />
+          <input id="searchInput" type="search" autocomplete="off" placeholder="Search recipes or ingredients…" aria-label="Search recipes" />
           <button type="submit" aria-label="Search">🔍 Search</button>
           <div class="search-suggest" id="searchSuggest"></div>
         </form>
@@ -340,10 +340,10 @@ html.js .reveal.in{opacity:1;transform:translateY(0)}
     <div class="cats-grid" id="categories"><div class="cats" id="catTiles" role="group" aria-label="Browse by category" style="display:contents">
       <button class="cat-tile cat-card" type="button" data-cat="Dinner"><span class="ctext"><b>Dinner</b><span>One-pan &amp; weeknight favourites</span><span class="cstat">⏱ 18 Minutes · 🍽 4 Servings</span></span><img src="images/cat-dinner.webp" alt="Honey garlic salmon" /><span class="go">↗</span></button>
       <button class="cat-tile cat-card" type="button" data-cat="Desserts"><span class="ctext"><b>Desserts</b><span>Cookies, cakes &amp; no-bake treats</span><span class="cstat">⏱ 60 Minutes · 🍪 48 Cookies</span></span><img src="images/cat-desserts.webp" alt="Peanut butter blossom cookies" /><span class="go">↗</span></button>
-      <button class="cat-tile cat-card" type="button" data-cat="Breakfast"><span class="ctext"><b>Breakfast</b><span>Start the day deliciously</span><span class="cstat">6 Recipes</span></span><img src="images/pancakes.webp" alt="Fluffy buttermilk pancakes with maple syrup" /><span class="go">↗</span></button>
-      <button class="cat-tile cat-card" type="button" data-cat="Healthy"><span class="ctext"><b>Healthy</b><span>Fresh bowls &amp; salads</span><span class="cstat">6 Recipes</span></span><img src="images/buddha-bowl.webp" alt="Rainbow quinoa buddha bowl" /><span class="go">↗</span></button>
-      <button class="cat-tile cat-card" type="button" data-cat="Snacks"><span class="ctext"><b>Snacks</b><span>Quick bites &amp; finger foods</span><span class="cstat">6 Recipes</span></span><img src="images/potato-wedges.webp" alt="Crispy air fryer potato wedges" /><span class="go">↗</span></button>
-      <button class="cat-tile cat-card" type="button" data-cat="Drinks"><span class="ctext"><b>Drinks</b><span>Smoothies, coffee &amp; more</span><span class="cstat">6 Recipes</span></span><img src="images/mango-smoothie.webp" alt="Mango smoothie with mango cubes and mint" /><span class="go">↗</span></button>
+      <button class="cat-tile cat-card" type="button" data-cat="Breakfast"><span class="ctext"><b>Breakfast</b><span>Start the day deliciously</span><span class="cstat">7 Recipes</span></span><img src="images/pancakes.webp" alt="Fluffy buttermilk pancakes with maple syrup" /><span class="go">↗</span></button>
+      <button class="cat-tile cat-card" type="button" data-cat="Healthy"><span class="ctext"><b>Healthy</b><span>Fresh bowls &amp; salads</span><span class="cstat">7 Recipes</span></span><img src="images/buddha-bowl.webp" alt="Rainbow quinoa buddha bowl" /><span class="go">↗</span></button>
+      <button class="cat-tile cat-card" type="button" data-cat="Snacks"><span class="ctext"><b>Snacks</b><span>Quick bites &amp; finger foods</span><span class="cstat">7 Recipes</span></span><img src="images/potato-wedges.webp" alt="Crispy air fryer potato wedges" /><span class="go">↗</span></button>
+      <button class="cat-tile cat-card" type="button" data-cat="Drinks"><span class="ctext"><b>Drinks</b><span>Smoothies, coffee &amp; more</span><span class="cstat">7 Recipes</span></span><img src="images/mango-smoothie.webp" alt="Mango smoothie with mango cubes and mint" /><span class="go">↗</span></button>
     </div></div>
 
 
@@ -393,9 +393,9 @@ html.js .reveal.in{opacity:1;transform:translateY(0)}
     <h2>Kitchen essentials</h2>
     <p class="sub">The tools used again and again in these recipes.</p>
     <div class="ess">
-      <div class="ess-card"><img class="ess-img" src="images/ess-skillet.webp" alt="Cast-iron skillet" loading="lazy" decoding="async"><b>Cast-Iron Skillet</b><p>For the salmon and other one-pan dinners — sears beautifully and goes straight to the table.</p><div class="link-slot"><a href="https://link.amazon/B08iqL6K2" target="_blank" rel="nofollow sponsored noopener">Available on Amazon ↗</a></div></div>
-      <div class="ess-card"><img class="ess-img" src="images/ess-jars.webp" alt="Glass meal-prep jars" loading="lazy" decoding="async"><b>Glass Meal-Prep Jars</b><p>Overnight oats and salads stay fresh for days — and they photograph perfectly for Pinterest.</p><div class="link-slot"><a href="https://link.amazon/B038tdVU0" target="_blank" rel="nofollow sponsored noopener">Available on Amazon ↗</a></div></div>
-      <div class="ess-card"><img class="ess-img" src="images/ess-knives.webp" alt="Chef's knife set" loading="lazy" decoding="async"><b>Chef’s Knife Set</b><p>Fast, safe chopping makes every “15-minute” recipe actually take 15 minutes.</p><div class="link-slot"><a href="https://link.amazon/B07oMpyk7" target="_blank" rel="nofollow sponsored noopener">Available on Amazon ↗</a></div></div>
+      <div class="ess-card"><img class="ess-img" src="images/ess-skillet.webp" alt="Cast-iron skillet" loading="lazy" decoding="async"><b>Cast-Iron Skillet</b><p>For the salmon and other one-pan dinners — sears beautifully and goes straight to the table.</p><div class="link-slot"><a href="https://www.amazon.com/dp/B00006JSUA?tag=quickandtas0c-20" target="_blank" rel="nofollow sponsored noopener">Available on Amazon ↗</a></div></div>
+      <div class="ess-card"><img class="ess-img" src="images/ess-jars.webp" alt="Glass meal-prep jars" loading="lazy" decoding="async"><b>Glass Meal-Prep Jars</b><p>Overnight oats and salads stay fresh for days — and they photograph perfectly for Pinterest.</p><div class="link-slot"><a href="https://www.amazon.com/dp/B0F4QF4D3Y?tag=quickandtas0c-20" target="_blank" rel="nofollow sponsored noopener">Available on Amazon ↗</a></div></div>
+      <div class="ess-card"><img class="ess-img" src="images/ess-knives.webp" alt="Chef's knife set" loading="lazy" decoding="async"><b>Chef’s Knife Set</b><p>Fast, safe chopping makes every “15-minute” recipe actually take 15 minutes.</p><div class="link-slot"><a href="https://www.amazon.com/dp/B0C1YBPJ43?tag=quickandtas0c-20" target="_blank" rel="nofollow sponsored noopener">Available on Amazon ↗</a></div></div>
     </div>
       <p class="aff-note">When you shop through our Amazon links, we may earn a small commission at no extra cost to you — see our <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
   </section>
@@ -626,7 +626,37 @@ var RECIPES = [
   desc:"Rich, silky hot chocolate made with real chocolate and warm milk — a cosy hug in a mug in 10 minutes.",
   ings:[[2, "cups", "milk"], [100, "g", "dark chocolate"], [2, "tbsp", "cocoa powder"], [2, "tbsp", "sugar"]],
   steps:["Heat the milk.", "Add the chocolate.", "Whisk until smooth.", "Sweeten to taste.", "Pour and top."],
-  tip:"Real chocolate, not just cocoa, is what makes it silky — use at least 70% dark."}
+  tip:"Real chocolate, not just cocoa, is what makes it silky — use at least 70% dark."},
+{id:"cornflake-hot-honey-chicken-tenders", rating:4.9, votes:33, page:"cornflake-hot-honey-chicken-tenders.html", pin:"pins/cornflake-hot-honey-chicken-tenders.jpg", title:"Cornflake Hot Honey Chicken Tenders", cat:"Dinner", img:"images/cornflake-hot-honey-chicken-tenders-hero.webp", alt:"Golden cornflake chicken tenders drizzled with hot honey and ranch dip", time:50, serves:4, level:"Easy", kcal:520,
+  desc:"Golden, crunchy cornflake-crusted chicken tenders drizzled with hot honey — the viral TikTok dinner that is crispy, sticky and sweet all at once.",
+  ings:[[500, "g", "chicken tenderloins"], [2, "cups", "cornflakes"], [2, "", "eggs"], [0.25, "cup", "honey"]],
+  steps:["Crush the cornflakes.", "Coat the chicken.", "Bake until golden.", "Make the hot honey.", "Drizzle and serve."],
+  tip:"A wire rack on the tray keeps the bottoms crisp — the hot air gets all the way around."},
+{id:"no-bake-oreo-cheesecake", rating:4.9, votes:34, page:"no-bake-oreo-cheesecake.html", pin:"pins/no-bake-oreo-cheesecake.jpg", title:"No-Bake Oreo Cheesecake", cat:"Desserts", img:"images/no-bake-oreo-cheesecake-hero.webp", alt:"A slice of no-bake Oreo cheesecake with whipped cream and mini Oreos", time:20, serves:8, level:"Easy", kcal:380,
+  desc:"A buttery Oreo crust with a fluffy, creamy cheesecake filling — no oven, no fuss, just chill and slice.",
+  ings:[[300, "g", "Oreo cookies"], [500, "g", "cream cheese"], [1, "cup", "double cream"], [0.5, "cup", "icing sugar"]],
+  steps:["Make the crust.", "Whip the filling.", "Fold in the crumbs.", "Chill until set.", "Slice and serve."],
+  tip:"Chill it overnight if you can — the flavour gets even better and it slices perfectly."},
+{id:"high-protein-breakfast-burrito", rating:4.9, votes:35, page:"high-protein-breakfast-burrito.html", pin:"pins/high-protein-breakfast-burrito.jpg", title:"High-Protein Breakfast Burrito", cat:"Breakfast", img:"images/high-protein-breakfast-burrito-hero.webp", alt:"A high-protein breakfast burrito cut in half with eggs, chicken and cheese", time:20, serves:4, level:"Easy", kcal:450,
+  desc:"Scrambled eggs, seasoned chicken, cheese and beans wrapped in a toasted tortilla — a filling, high-protein breakfast you can eat with one hand.",
+  ings:[[8, "", "large eggs"], [300, "g", "cooked chicken"], [1, "cup", "black beans"], [4, "", "large flour tortillas"]],
+  steps:["Scramble the eggs.", "Warm the filling.", "Fill the tortillas.", "Roll them up.", "Toast and serve."],
+  tip:"Wrap spares in foil and freeze — a 2-minute reheat and you have breakfast all week."},
+{id:"street-corn-sweet-potato-bowl", rating:4.8, votes:30, page:"street-corn-sweet-potato-bowl.html", pin:"pins/street-corn-sweet-potato-bowl.jpg", title:"Street Corn Sweet Potato Bowl", cat:"Healthy", img:"images/street-corn-sweet-potato-bowl-hero.webp", alt:"A street corn sweet potato bowl with cotija, lime and coriander", time:30, serves:2, level:"Easy", kcal:420,
+  desc:"Roasted sweet potato, charred street corn, creamy lime sauce and cotija — a fresh, filling bowl that tastes like summer.",
+  ings:[[2, "", "large sweet potatoes"], [2, "cups", "corn kernels"], [50, "g", "cotija cheese"], [1, "", "lime"]],
+  steps:["Roast the sweet potato.", "Char the corn.", "Make the lime sauce.", "Build the bowls.", "Top and serve."],
+  tip:"Frozen corn works fine — just pat it dry first so it chars instead of steaming."},
+{id:"crispy-parmesan-onion-chips", rating:4.8, votes:28, page:"crispy-parmesan-onion-chips.html", pin:"pins/crispy-parmesan-onion-chips.jpg", title:"Crispy Parmesan Onion Chips", cat:"Snacks", img:"images/crispy-parmesan-onion-chips-hero.webp", alt:"Golden crispy parmesan onion chips with ranch dip", time:30, serves:4, level:"Easy", kcal:180,
+  desc:"Thin onion rounds baked under a blanket of Parmesan until golden and lacy — the two-ingredient TikTok snack that crunches like a chip.",
+  ings:[[2, "", "large onions"], [1, "cup", "grated Parmesan"], [1, "tsp", "garlic powder"], [1, "tbsp", "olive oil"]],
+  steps:["Slice the onions.", "Spread the Parmesan.", "Season and oil.", "Bake until crisp.", "Cool and serve."],
+  tip:"Cool them on the tray for 5 minutes — they crisp up as they cool."},
+{id:"dirty-soda", rating:4.8, votes:27, page:"dirty-soda.html", pin:"pins/dirty-soda.jpg", title:"Dirty Soda", cat:"Drinks", img:"images/dirty-soda-hero.webp", alt:"A tall glass of dirty soda with coconut cream swirl and a lime wedge", time:5, serves:1, level:"Easy", kcal:150,
+  desc:"Cola swirled with coconut cream, lime and vanilla — the Utah soda-shop drink that took over TikTok in 2026.",
+  ings:[[1, "cup", "cola"], [2, "tbsp", "coconut cream"], [1, "tbsp", "lime juice"], [0.5, "tsp", "vanilla extract"]],
+  steps:["Fill the glass.", "Add the coconut cream.", "Squeeze the lime.", "Stir gently.", "Serve with a wedge."],
+  tip:"Chill the cola first — warm cola kills the fizz."}
 ];
 
 var grid = document.getElementById('grid');
